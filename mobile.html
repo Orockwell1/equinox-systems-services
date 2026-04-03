@@ -27,18 +27,18 @@
   nav{background:#ffffff;border-bottom:1px solid #c8dce8;padding:0 1rem;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100}
   .logo{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--black)}
   .logo span{color:var(--accent2)}
-  .hamburger{background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--black);width:44px;height:44px;padding:0;display:flex;align-items:center;justify-content:center;margin-left:auto}
+  
   .nav-links{display:none}
   .nav-cta{display:none}
 
   /* MOBILE MENU */
-  .mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;bottom:0;background:#ffffff;flex-direction:column;z-index:99;overflow-y:auto;max-height:calc(100vh - 56px)}
-  .mobile-menu.active{display:flex}
-  .mobile-menu a{padding:1rem;font-size:.9rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#5a7080;border-bottom:1px solid var(--border);display:block}
-  .mobile-menu a:active{background:var(--panel)}
-  .mobile-menu-cta{padding:1rem;margin:1rem}
-  .mobile-menu-cta button{width:100%;padding:0.75rem;background:var(--accent);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;border-radius:4px}
-  .mobile-menu-cta button:active{background:var(--accent2)}
+  
+  
+  
+  
+  
+  
+  
 
   /* HERO */
   .hero{background:var(--white);padding:2rem 1.5rem;overflow:hidden;position:relative;min-height:auto}
@@ -159,16 +159,10 @@
 
 <nav>
   <div class="logo">Equinox <span>Systems</span></div>
-  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#services" onclick="toggleMenu()">Services</a>
-  <a href="#results" onclick="toggleMenu()">Results</a>
-  <a href="#products" onclick="toggleMenu()">Products</a>
-  <a href="#about" onclick="toggleMenu()">About</a>
-  <a href="#contact" onclick="openContactModal();toggleMenu()" style="background:var(--accent);color:#fff;font-weight:700;text-align:center;border-bottom:none;margin:1rem;border-radius:4px;display:block;padding:.85rem 1.5rem">Contact</a>
-</div>
+
 
 <section class="hero">
   <div class="hero-accent"></div>
@@ -296,7 +290,7 @@
     <button class="modal-close" onclick="closeContactModal()">&times;</button>
     <h2 style="margin-bottom:1.25rem">Reach Us Any Time</h2>
     <p style="margin-bottom:1rem;font-size:1.1rem"><a href="tel:6019825588" style="color:var(--accent2);font-weight:600">(601) 982-5588</a></p>
-    <p style="font-size:.95rem"><a href="/cdn-cgi/l/email-protection#ea998b868f99aa8f9b9f838485929993999e8f8799c4898587" style="color:var(--accent2)"><span class="__cf_email__" data-cfemail="0774666b6274476276726e69687f747e7473626a742964686a">[email&#160;protected]</span></a></p>
+    <p style="font-size:.95rem"><a href="mailto:sales@equinoxsystems.com" style="color:var(--accent2)">sales@equinoxsystems.com</a></p>
   </div>
 </div>
 <footer>
@@ -318,7 +312,7 @@
     <h4>Contact</h4>
     <ul>
       <li><a href="tel:(601)982-5588">(601) 982-5588</a></li>
-      <li><a href="/cdn-cgi/l/email-protection#cbb8aaa7aeb88baebabea2a5a4b3b8b2b8bfaea6b8e5a8a4a6"><span class="__cf_email__" data-cfemail="4132202d243201243034282f2e3932383235242c326f222e2c">[email&#160;protected]</span></a></li>
+      <li><a href="mailto:sales@equinoxsystems.com">sales@equinoxsystems.com</a></li>
     </ul>
   </div>
 </footer>
@@ -328,6 +322,10 @@
   <span>Jackson, MS</span>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
+<script>
 function openContactModal(){document.getElementById('contactModal').classList.add('active');document.body.style.overflow='hidden'}
+function closeContactModal(){document.getElementById('contactModal').classList.remove('active');document.body.style.overflow=''}
+function toggleMenu(){var m=document.getElementById('mobileMenu');if(m)m.classList.toggle('active')}
+</script>
+</body>
+</html>
